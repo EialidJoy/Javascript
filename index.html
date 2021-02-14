@@ -1,0 +1,739 @@
+<script>
+	/*
+	Key notes----------->
+	1. string and array both can be accessed by index like we do in array.
+	2.we can append array or we can append values to array using push
+	3.if else condition dekhlei "conditional operator or ternary operator" use korbo.
+	4. we can create any function using anonymous function
+	
+	*/
+
+
+
+
+
+
+
+
+
+	// console.log("Hello World")
+
+	// data types=
+	// underfined--> which value is not initiated or not defined
+	// null--> null means nothing, It is set to a variable to show the variable has a nothing value.
+	// boolean,string, symbol, number and object are data types.
+
+	// var, let, const--> these three are only there to declare variables.
+	// var--> var is used to whole class. and can be used anywhere.
+	// let-->act like java variables, does not act after the scope that it was created.
+	// const--> to declare or store permanent and fixed values. 
+
+	// var a;
+	// var b=7;
+	// var c="value of a and b"
+	// console.log(a)
+
+	// a=8;
+	// b=a
+	// console.log(c + " is " + "a = " + a + " b = " + b);
+	// myvar++;
+	// a=12
+	// a +=1
+
+	// a -=1
+	// a *=2
+	// a /=3
+
+	// string value can be created with "" or '' or ``...It does not matter in sublime text. 
+
+	// var remainder=a % 3 ;
+	// console.log(remainder)
+
+	// to write string inside a string
+	// var myStr="I am \"Eialid \" Ahmed Joy, a \"java developer\" ";
+	// console.log(myStr);
+
+
+	// another way to to write string inside a string
+	// var myStr='I am "Eialid" Ahmed Joy, a "java developer" ';
+	// console.log(myStr)
+
+	/* code             output
+	 	\'				single quote
+	 	\"				double quote
+		\\				backslash
+		\n 				new line
+		\r 				carriage return
+		\t 				tab
+		\b 				backspace
+		\f 				form feed
+	*/	
+
+	// var myStr="FirstLine\n\t \\SecondLine\nThirdLine";
+	// console.log(myStr)
+
+	// printing length of a string
+	// var str="Eialid";
+	// console.log(str.length);
+
+	// printing index of a string --> we can use bracket notation to find string index like arrays
+	// var str1=str[2];
+	// console.log(str1);
+
+
+	/* String imutability--> means it can not be altered. By this it basically means, we can not set a index value. for example-->
+	 var str="Iialid";
+	 str[0]="E";
+	 console.log(str); --> the output will be "Iialid" this since string is imutable by default in javascript, for changing str index value, we have to reset the whole string to "Eialid" */
+
+	 // we can store a string's index value-->
+	 // var str="Eialid";
+	 // var str1=str[2];
+	 // console.log(str1);
+
+	 
+	 // Arrays--> an array can store any type of values like string int or any data type.
+	 // var arr2=[["Eialid", 23],["Ahmed",true]];
+	  // var arr1=["Eialid", 23];
+	 // console.log(arr1);
+
+	 // Nested Arrays
+	 // console.log(arr2[1][0]);
+
+	 // we can append array or we can append values to array using push
+	  // var arr1=["Eialid", 23];
+	  // arr1.push(true);
+	  // arr1[2]=false;
+	  // console.log(arr1);
+
+	  // var arr2=[["Eialid", 23],["Ahmed",true]];
+	  // arr2.push(24);
+	  // console.log(arr2)
+
+
+	  // use pop to eliminate last value from array
+	  // var arr2=[["Eialid", 23],["Ahmed",true]];
+	  // var variable=arr2.pop();
+	  // console.log(arr2);
+	  // console.log(variable);
+
+	  // shifting from array --> shift method eliminate first value from the array
+	  // var arr2=[["Eialid", 23],["Ahmed",true]];
+	  // var variable=arr2.shift(); 
+	  // arr2.unshift(["Eiald", 22]); --> unshift push er mtoi kaj kore, eitar output dbe [["Eialid", 22],["Ahmed",true]];
+	  // console.log(variable);
+	  // console.log(arr2);
+
+	  // function allow us to create reusable code.
+	  // learn how to use function
+	 // function wordBlank(myNoun, myAdjective, myVerb, myAdverb){
+	 	
+	 // 	var result = "I am " + myAdverb + " " + myAdjective + " " + myVerb + " "+ myNoun;
+	 // 	return result; 
+	 // }
+
+	// console.log(wordBlank("Eialid","Ahmed","Joy","Golam"));
+
+
+	// scope refers to the visibility of variables in a code
+	/* global--> global variable are declared outside of functions using var keyword. if we we create a variable with var keyword inside a function, that will not be global, but if we dont use var keyword before that variable, that varibale will also become global variable */
+
+	/* local scope--> declares inside a function or it may be function parameters.*/
+
+	// function globalScope(){
+	// 	var test1=5;
+	// 	console.log(test1)
+
+	// }
+
+
+	/*global vs local variable example
+	var variable="Eialid";
+	function globalVsLocal(){
+		var variable="Joy"
+		return variable; 
+	}
+	
+	console.log(globalVsLocal()); */
+
+	// create a function that will push an element to an array and return first element from the array----> like queue
+	/*
+	function queue1(deleteValue){
+		arr1.push(6);
+		arr1.shift();
+		return arr1;
+	}
+
+	var arr1=[1,2,3,4,5];
+	console.log("Before : " + JSON.stringify(arr1)); -->JSON.stringify()--> basically converts an object or an array to a string, this is used so that we can print properly.
+	console.log("After : " + JSON.stringify(queue1())); */
+
+
+	// test if statements and equality operator(==) 
+	// function testIfStatement(val){
+	// 	if (val==12) {return "This is equal";}return "This is not equal";
+	// }
+
+	// console.log(testIfStatement(20));
+
+	/* equality operator(==) and strict equality operator(===)--> equality operator(12=='12') eitake true dbe bcz '12' will be converted into integer,, but strict equality operator will give false result since the data type is strictly maintained. 
+	
+	function testIfStatement(val){ --> equality operator
+		if (val=='12') {return "This is equal";}return "This is not equal";
+	}
+	console.log(testIfStatement(12)); --> this will output "This is equal" 
+	
+	function testIfStatement(val){ --> strict equality operator
+		if (val==='12') {return "This is equal";}return "This is not equal";
+	}
+	console.log(testIfStatement(12)); --> this will output "This is not equal"
+	*/
+
+	/* not equal operator--> (!=) */
+	/* strict not equal operator --> (!==) 
+	logical and operator (&&) and logical or operator (||)
+	*/
+	/* if (true) {
+
+	}
+	else{
+
+	}
+	--> else if 
+	if (true) {
+
+	}
+	else if{
+
+	} 
+	else{
+	
+	}
+
+	*/
+
+	// switch statement example --> case statements follow strict equality operator(===)
+	// when there are multiple else if options, in those situation we have to switch satements since switch statements are easier to understand in those cases.
+
+	/* function switchExample(value){
+		switch(value){
+			case 1:
+				return "Beta";
+
+			case 2:
+				return "Gamma";
+
+			case 3:
+				return "Delta";
+		}
+	}
+
+	console.log(switchExample(1)) */
+
+	/* default in switch case
+	 function switchExample(value){
+	 	var finalAnswer="";
+		switch(value){
+			case "a":
+				finalAnswer="Apple";
+				break;
+
+			case "b":
+				finalAnswer="Ball";
+				break;
+
+			case "c":
+				finalAnswer="Cat";
+				break;
+			default:
+				finalAnswer="wrong input given"
+				break
+		}
+		return finalAnswer;
+	}
+
+	console.log(switchExample(1)); */
+
+	/* identical options in switch statements --> how to use multiple cases to provide one single output. 
+
+	function switchExample(value){
+	 	var finalAnswer="";
+		switch(value){
+			case "a":
+			case "b":
+			case "c":
+				finalAnswer="This is a alphabet"
+				break;
+			case 1:
+			case 2:
+			case 3:
+				finalAnswer="This is a number"
+				break;
+
+			default:
+				finalAnswer="wrong input given"
+				break
+		}
+		return finalAnswer;
+	}
+
+	console.log(switchExample("a")); */
+	
+
+	/* cards game, conditions are--> card value is 2,3,4,5,6 count will be incremented, card value 7,8,9 will have no impact and for 10, king, queen, jack, ace, the count value will be decremented....if count is greater than 0, the user will bet, if less than 0, the user will hold...  
+
+	var count=0;
+	function card(variable){
+		switch(variable){
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+				count++;
+				break;
+			case 10:
+			case "J":
+			case "Q":
+			case "K":
+			case "A":
+				count--;
+				break;
+
+		}
+		var betResult="Hold"
+		if (count > 0) {betResult="Bet";}
+		return count + " " + betResult;
+	}	
+
+	card(2); card(3); card(7); card("K"); card("A");
+
+	console.log(card("K")); */
+
+
+	/* objects--> objects value can be any data type like arrays, boolean or ano other.
+
+	var Eialid={
+		"Name": "Eialid Ahmed Joy",
+		"Age": 24,
+		"My Degree": "Undergrade",
+		"love": false,
+		"hobbies":["football","cricket"]
+	};
+
+	console.log("Object is :" + Eialid)
+
+	using dot notation to access object's properties
+	var variable1=Eialid.Age;
+	console.log(variable1);
+
+	using bracket notation to access object's properties --> bracket notation has to be used when we have properties that has spaces between words, for instance--> "My Degree"--> we can not access using dot notation, bt can be accessed by bracket notation easily. 
+	var variable2=Eialid["My Degree"];
+	console.log(variable2);
+
+	Eialid.love=true; ---> updating in an object
+	Eialid["My Degree"]="masters";
+	console.log("Object is :" + JSON.stringify(Eialid))
+
+	Eialid.affair=false; ----> inserting in an object
+	console.log("Object is :" + JSON.stringify(Eialid)) */
+
+
+	// kichu khujar jnne object use korte pari, for instance--> onk guli case jokhn thake and ususally amra ber korte chai "eita hoile oita", "oita hoile eita", erokom onk case k amra object a properties hishebe add kore oikhan tkhe easily bracket notation er madhome ber korte pari.
+
+	// function switchExample(value){
+	 	/* changing this switch statement 
+		 switch(value){
+			case "a":
+				finalAnswer="Apple";
+				break;
+
+			case "b":
+				finalAnswer="Ball";
+				break;
+
+			case "c":
+				finalAnswer="Cat";
+				break;
+			default:
+				finalAnswer="wrong input given"
+				break
+		}
+		return finalAnswer;
+	} */
+	
+	/* var finalAnswer="";
+		
+	 	var testObject={
+	 		"a":"Apple",
+	 		"b":"Ball",
+	 		"c":"Cat",
+	 		"my love": true
+	 	};
+
+	 	finalAnswer=testObject[value]
+	 	return finalAnswer;
+	 }	
+		
+	console.log(switchExample("my love"));	 */
+
+
+	/* deleting a property from an object
+	var testObject={
+	 		"a":"Apple",
+	 		"b":"Ball",
+	 		"c":"Cat",
+	 		"my love": true
+	};
+	delete testObject.a;
+	console.log(testObject); */
+
+
+	/* find whether an object has an object or not
+	var testObject={
+	 		"a":"Apple",
+	 		"b":"Ball",
+	 		"c":"Cat",
+	 		"my love": true
+	};
+
+	function testProperty(variable){
+		if(testObject.hasOwnProperty(variable)){
+			return testObject[variable];
+		}
+		else{
+			return "not found";
+		}
+	}
+
+	console.log(testProperty("my loveee")); */
+
+	/* example of complex arrays and accessing those complex arrays
+	var complexArray=[{
+		"a":"apple",
+		"b":"ball",
+		"c":"cat",
+		"d":["yes","no","very good"]
+	},
+	{
+		"e":"apple",
+		"f":"ball",
+		"g":"cat",
+		"h":["yes","no","very good"]
+	},
+	23
+	]
+
+	console.log(complexArray[1].h[1]) 	--> output will be no(accessing "h") */
+
+	/* ----------------------------------------------------------------------------
+	while loop use 
+
+	var myarr=[];
+	var i=0;
+	while(i<5){
+		myarr.push(i);
+		i++;
+	}
+	console.log(myarr) */
+
+	/* do...while loop 
+	--> the difference between while loop and do while loop is do while loop runs the code first and then checks the condition, but while loop checks the condition first and then runs the code.
+	
+
+	var myarr=[];
+	var i=20;
+	do{
+		myarr.push(i);
+		i++;
+	}
+	while(i<5);
+	console.log(i,myarr); */
+
+
+	/*for loops use 
+	var myarr=[];
+	var i=0;
+	for(var i=0; i<9; i++){
+		myarr.push(i);
+	}
+	console.log(myarr); */
+
+	/* ------------------------------------------------------------------------------ 
+	create a function that will take firstName and a property of an array (which has multiple objects in its index). the function checks the firstName for every index with the name given and if it matches, it returns property value that is provided in the function's parameter, if the property is not found it returns "No such property" and also if the name is not found then it returns "not found" 
+
+	function lookUpProfile(name,prop){
+		for (var i = 0; i < arr.length; i++) {
+			if (myarr[i].firstName===name){
+				return myarr[i].prop || "No such property";
+			}
+		}
+		return "Not found";
+	}             */	
+	
+	/* ---------------------------------------------------------------------------- 
+	functions to generate random numbers 
+
+	function randomFractionNumber(){
+		return Math.random(); --> this Math.random() function generates fraction numbers from 0 to 1.
+	}
+	console.log(randomFractionNumber())
+
+	function randomWholeNumber(){
+		return Math.floor(Math.random()*15); --> this Math.floor() function converts the fraction into whole number, we can see (Math.random()*15), this generates random fraction number 0 t0 14 which is later converted into whole number. 
+	}
+	console.log(randomWholeNumber()) */
+
+	/*functions to generate random numbers with a range 
+
+	function randomFractionNumberWithRange(minRange,maxRange){
+		return Math.floor(Math.random()*(maxRange-minRange+1))+minRange;
+	}
+	console.log(randomFractionNumberWithRange(3,6))		*/
+
+	/* --------------------------------------------------------------------------
+	function to convert string to integer --> parseInt function
+	
+	function stringToInteger(variable){
+		return parseInt(variable)
+	}
+	console.log(stringToInteger("11")) */
+
+
+	/* --------------------------------------------------------------------------- 
+	--> use the condiontal operator or ternary operator
+	rules--> condition? statement if true happens : statement if false happens.
+	
+	function checkEquality(a,b){
+		return a===b? "equal":"not equal"
+	} 
+	console.log(checkEquality(1,1)) 
+
+	 --> multiple condiontal or ternary operator 
+
+	 function checkEquality(a){
+		return a<0 ? "It's negative number" : a>0? "It's a positive number" : "This number is zero"
+	} 
+	console.log(checkEquality(-1)) 	 
+*/
+	/* ---------------------------------------------------------------------------- 
+	--> differences between var and let keyword
+	--> let,const keyword introduced in ES6 (2015), everyone used var before that.	
+	1. a variable can be created twice using var keyword but using let, we can create a variable once only.
+
+	--> "use strict" mode is used in javascript to catch common coding mistakes like not declaring a variable. This can be written at the starting of the code or starting of any function.
+
+	--> a var variable is created globally (on the whole class) or locally if it is created inside a function (created in if statement but will be accessed in whole function).
+
+	--> let variable always acts in the scope. They dont work outside of the scope that it was created. 
+	
+	*/
+
+	/*
+		const--> this keyword makes the variable read only and these variables can not be changed further. const can be before any data type like integer, string, arrays, objects etc.
+		
+		But we can mutate a constant array using bracket notation.		
+	
+	const ARR1=[1,2,3]
+	function constArraMutation(){
+		// arr1=[3,2,1] --> we can not do this directly by this way.
+		ARR1[0]=3;
+		ARR1[1]=2;
+		ARR1[2]=1;
+
+	}
+
+	constArraMutation();
+	console.log(ARR1) */
+	
+	/*But it is not right to easily rewrite the array or object even after declaring constant. Therefore, if we dont want to change it in any of our further code, we must freeze those constants using Object.freeze(constant variable) method. 
+	
+	function freezeObject(){
+		"use strict";
+		const MATH_CONSTANT={
+			"PI" :3.14
+		}
+		Object.freeze(MATH_CONSTANT);
+
+		try{
+			MATH_CONSTANT.PI=3.26
+		}
+		catch(ex){
+			console.log(ex)
+		}
+		return MATH_CONSTANT.PI
+	}
+
+	const PI=freezeObject()
+	console.log(PI) */
+
+	/* 
+	--------------------------------------------------------------------------------
+	use arrow function to write concise anonymous function 
+	--> anonymous functions are those basically which does not have a name and starts with function(){} this.
+	--> we can write this anonymous functions using arrow functions.
+	rules of writing arrow functions-->
+	1. just the parameter---->()
+	2. then the arrow sign (==>)
+	3. then just the body.
+	}
+	let anonymous=function(){
+		return new Date();
+	} 
+
+	let anonymous=()=> new Date(); 
+	
+	arrow functions with multiple parameters
+	
+
+	let variable=(str1,str2)=> str1.concat(str2);
+
+	console.log(variable([1,2],[3,4,5]));
+	
+	
+	---> create a normal function using anonymous function and conditional operator idea.
+	let checkEquality=(a,b)=>
+		 a===b? "equal":"not equal"
+	console.log(checkEquality(1,1)) 
+
+	--> map(), filter(), reduce(), all of these function takes function as an argument,,,arrrow function tremendously well on this higher order functions 
+
+	--> whenever one function takes another function as an arguement, that's a great time for using arrow functions.
+	*/
+
+	/* create a function that will take an array and only square those integers that are greater than 0 
+
+	const arr1=[4,2,2.5,-1,3]
+
+	const squaredIntegers=(arr1)=>{
+		const arr2=arr1.filter(number=>Number.isInteger(number) && number>0).map(x=>x*x)
+		return arr2
+	}	
+
+	console.log(squaredIntegers(arr1)) */
+
+	/* ---------------------------------------------------------------------------
+
+	default parameter--> this is used when parameters are not fixed of a function....what it does basically, set a default value for the parameter, therefore anytime function is called without less parameters given, it uses it's default value.
+
+	--> with the help of default parameter,we can take less number of parameter if needed.
+
+	const defaultParameterUse=(num1,num2=1,num3=1)=>num1+num2+num3;
+
+	console.log(defaultParameterUse(5,2))
+	console.log(defaultParameterUse(5)) */
+	
+	/*
+	-------------------------------------------------------------------------------
+
+	--> use the rest operator with function parameters. rest operator is (...). this helps functions to take variable number of parameters so that we can take any nummber of parameters for a function.
+	--> parameters are converted into arrays.
+	
+	const defaultParameterUse=(...args)=>args.reduce((a,b)=>a+b,0);
+
+	console.log(defaultParameterUse(5,2))
+	console.log(defaultParameterUse(5)) */
+
+	/* spread operator
+	const arr1=["A","B","C"]
+	let arr2
+	const spreadOperatorUse=array1=>{
+		//arr2=arr1 --> eita mane arr2= arr1's reference. therefore, duijonei jehetu same memory te refer kortse or save kortse, ejnne ekta change hwa mane dui arrayr jnnei value change hobe.
+		arr2=[...arr1]; --> but eita mane arr2=all the elements of arr1 just. ejnnne dui array dui jaigai save hobe and value o changed thakbe.
+		arr2[0]="D";
+	}
+	spreadOperatorUse(arr1)
+	console.log(arr1) */
+
+	/*
+	-----------------------------------------------------------------------------------
+	--> The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+
+	--> destructuring assignment are used for arrays and objects. for objects, it starts with const {}=object....for arrays, const [newArraysName]=parameter's array
+
+	--> destructuring assignment objects
+	
+
+	const object1={	
+		int1: 2,
+		int2: 3,
+		int3: 4
+	}
+
+	let x=object1.int1
+	let y=object1.int2
+	let z=object1.int3 
+	
+	--> previous way to copy object's properties to a variable.
+	
+
+	const { int1:x, int2:y, int3:z }=object1 ---> this is called destructuring way to assign objects's property to a variable.
+	console.log(x,y,z) */
+
+	/* destructuring assignment to assign variable to a nested object
+
+	const temperatures={
+		today:{min:20, max:30},
+		tomorrow:{min: 18, max: 35}
+	}
+
+	--> using arrow function way
+	let getMaxOfTomorrow=temperatures=>{
+		const {tomorrow:{max: maxOfTomorrow}}=temperatures;
+		return maxOfTomorrow
+	}
+	
+	/* 
+	--> using normal function way
+	function getMaxOfTomorrow(temperatures){
+	 	const {tomorrow:{max: maxOfTomorrow}}=temperatures
+	 	return maxOfTomorrow
+	} 
+	*/
+
+	/* console.log(getMaxOfTomorrow(temperatures))
+
+	*/
+
+	/*
+
+	destructuring assignment to assign variable from arrays
+	
+	--> destructuring assignment array er madhome amra konta nibo r konta nibo na, ta select korte pari.
+	--> assigning variable for 1,2 and 5
+
+	const [x,y,,,z]=[1,2,3,4,5]
+	console.log(x,y,z) 
+	let a=8;
+	let b=9;
+	(()=>{
+		"use strict";
+		[a,b]=[b,a]
+	})();
+	console.log(a,b)*/
+
+	/*
+	destructure assignment with rest operator
+
+	
+	create a function that will remove first two element of the array 
+	const arr1=[1,2,3,4,5,7,8,9,10]
+	function removeFirstTwo(arr1){
+		const [ , , ...arr2]=arr1
+		return arr2
+	}
+
+	console.log(arr1)
+	console.log(removeFirstTwo(arr1)) */
+
+	/*create  a function to print just first two number of an array */
+	const arr1=[1,2,3,4,5,7,8,9,10]
+	function removeFirstTwo(arr1){
+		const [a,b, ...arr2]=arr1
+		console.log(a,b)
+	}
+
+	console.log(arr1)
+	removeFirstTwo(arr1)
+
+</script>
